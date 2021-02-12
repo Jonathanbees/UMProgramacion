@@ -1,0 +1,20 @@
+Comandos  para agregar repositorio git:
+1. git init
+2. git add .
+3. git commit -m "Tareas Programación"
+4. git branch -M main
+5. git remote add origin https://github.com/UserGIT/exampleRepo.git //En esta línea se agrega la dirección https del usuario
+6. git push -u origin main
+
+Editar repositorio git
+
+Para agregar elementos al repositorio los comandos son:
+1. git add *
+2. git commit -m "Adicion ...." //lo que vayamos a agregar
+3. git push
+
+Para eliminar algún elemento o cambiarlo/agregarlo: 
+
+1. git add *
+2. git commit -m "Adicion y borrado ...." ó "Borrado de archivo..."//lo que vayamos a agregar
+3. git push
