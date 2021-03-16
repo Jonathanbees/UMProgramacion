@@ -1,0 +1,14 @@
+.cuerpo{
+	margin: 20px;
+	/*background-color: black;*/
+}
+.div {
+	border: black 3px solid;
+	margin: 10px;
+	padding: 10px;
+  }
+  
+  .div {
+	border: none;
+	background-color: lightblue;
+  }

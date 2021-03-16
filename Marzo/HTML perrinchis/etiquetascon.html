@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clases de Etiquetas</title>
+</head>
+<body>
+    <!--etiquetas de listas-->
+    <p>
+    <h1>etiquetas de titulos:</h1>
+    <h2>etiquetas de titulos:</h2>
+    <h3>etiquetas de titulos:</h3>
+    <h4>etiquetas de titulos:</h4>
+    <h5>etiquetas de titulos:</h5>
+    <h6>etiquetas de titulos:</h6>
+    </p>
+    Son las que van desde h1 hasta h6
+    
+    <h3>etiquetas de listas</h3>
+    <p>Listas no ordenadas:
+        Las listas no ordenadas van dentro de la etiqueta ul>. Cada ítem que queramos añadir a la lista, lo haremos dentro de la etiqueta li> y su cierre
+    </p>
+    
+    <ul>
+        <li type="circle">Esta es una viñeta tipo circle.</li>
+        <li type="square">Esta es una viñeta tipo square.</li>
+        <li type="disc"> Esta es una viñeta tipo disc.</li>
+    </ul>
+
+    <p>
+        Listas Ordenadas
+        Las listas ordenadas van enmarcadas dentro de las etiquetas ol> y su cierre.
+        Una etiqueta es un texto incluido entre los símbolos menor que y mayor que (>).Cada ítem de la lista se escribe con la misma etiqueta que en las no ordenadas: li>. Pero al ser listas ordenadas las viñetas serán números y éstos se irán generando automáticamente por orden, conforme agreguemos nuevos ítems.
+    
+    </p>
+    <ol>
+        <li>Este ítem será el número 1 </li>
+        <li>Este ítem será el número 2</li>
+        <li>Este ítem será el número 3</li>
+    </ol>
+    <h3>etiquetas de imagenes</h3>
+    <p>HTML nos proporciona la etiqueta  para insertar imágenes dentro de nuestra página web. A diferencia de las etiquetasque vimos anteriormente, esta no requiere de la etiqueta de cierre, pero si de una serie de propiedades o atributos, los cuales veremos a continuación.</p>
+    <ul>
+        <li>
+        src: Este atributo es el que indica la URL o ruta dónde se encuentra alojada la imagen que se quiere mostrar.</li>
+        <li>align: Este atributo alinea la imagen, utilizando el valor "left" se alineará la izquierda, "right" para alinearla a la derecha, "top" para alinear la imagen con un texto en la parte superior, "bottom" para alinear la imagen con un texto en la parte inferior y "middle" para alinear la imagen con un texto al centro.</li>
+    <li>
+        title: Con este atributo se puede colocar una descripción a la imagen. Esta se mostrará al pasar el ratón por encima.
+    </li>
+    <li>height, width: El atributo height marca la altura de la imagen, mientras que width marca el ancho de esta.</li>
+    <li>alt: Con este atributo se puede especificar un texto alternativo para la imagen.</li>
+    </ul>
+    <p>ejemplo:</p>
+    <img src="http://www.w3.org/html/logo/downloads/HTML5_Logo_256.png" width="200" alt="mi logo" ="right">
+   Este es un texto para ver la alineación
+    <h3>Etiquetas de hipervínculos</h3>
+    <p>Un hipervínculo es un enlace que permite de una manera muy cómoda redirigir al usuario a otra página web o a otra parte dentro de la misma página o archivo, dando clic sobre este.
+        Las etiquetas para especificar un enlace es a> y su cierre. El texto que se mostrará para el enlace se debe colocar entre estas etiquetas de apertura y cierre.
+    </p>
+    <p>Los principales atributos o propiedades de los hipervínculos son:</p>
+    <ul>
+        <li>
+            href: Especifica la URL, ruta o dirección a la cual se quiere ir al hacer clic sobre el enlace.
+        </li>
+        <li>
+            target: Específica donde se abre el documento enlazado. El target puede ser “_blank” para indicar que el documento enlazado se abrirá en otra pestaña del navegador o ventana si el navegador no soporta pestañas, “_self” para indicar que se abrirá en el mismo frame donde se encontraba el enlace, “_parent” para indicar que se abrirá en un frame padre y “_top” para indicar que se abrirá en un frame de tamaño completo de toda la página.
+        </li>
+    </ul>
+    <p>ejemplo:</p>
+    <a href="http://www.youtube.com" target="_blank">Enlace a youtube</a>
+
+    <h3>etiqueta de división</h3>
+    <p>La etiqueta div> define una división. Esta etiqueta permite agrupar varios elementos de bloque (párrafos, encabezados, listas, tablas, divisiones, etc). En principio, los navegadores no muestran nada especial cuando se crea una división, salvo que se dé formato a la división con la hoja de estilo.</p>
+
+    <p><h4>Divisiones anidadas</h4>
+        La etiqueta div> se puede anidar (es decir, que una división puede contener otras divisiones), por lo que se utiliza para estructurar en bloques el contenido de la página web.</p>
+    <div style="color: blue;">
+        <h4> Ejemplo de div y span </h4>
+            <p>
+            Esto es un párrafo dentro de un div,
+            <span style="color: red;"> y esto un span dentro de un párrafo.</span>
+            </p>
+        </div>
+    
+    
+    <h3>etiqueta de menú de navegación</h3>
+
+    <p>El elemento HTML nav> y su respectivo cierren, representan una sección de una página cuyo propósito es proporcionar enlaces de navegación, ya sea dentro del documento actual o a otros documentos.</p>
+    
+    <p>ejemplo:</p>
+    <nav>
+        <a href="https://www.google.com"target="_blank">Enlace a google</a>
+        <a href="http://gmail.com/"target="_blank">Enlace a gmail</a>
+        <a href="http://facebook.com/"target="_blank">Enlace a facebook</a>
+    </nav>
+
+    <h3>etiqueta de pie de pagina</h3>
+    <p>Contiene la agrupación de código HTML correspondiente al pie de página que suelen tener habitualmente todas las webs. Muy parecida a la etiqueta header(el encabezado).</p>
+
+    <p>ejemplo:</p>
+    <footer>
+        <ul>
+            <li><a href="aviso-legal.html">Aviso legal</a></li>
+            <li><a href="privacidad.html">Provacidad</a></li>
+            <li><a href="contactar.html">Contactar</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
