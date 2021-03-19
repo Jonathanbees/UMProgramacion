@@ -1,0 +1,156 @@
+use perrinchis;
+
+/*
+insert into TipoDocus values
+
+(0,'Registro Civil'),
+
+(0,'Tarjeta de Identidad'),
+
+(0,'Cédula de Ciudadanía'),
+(0,'Cédula de Extrangería'),
+
+(0,'Pasaporte'),
+
+(0,'No Identificado');
+
+select * from Tipodocus;
+
+*/
+/*
+En las bases de datos hay 4 operaciones:
+C = Create 	   = Insertar      insert, create, replace
+R = Read       = Seleccionar   select
+U = Update     = Actualizar    update
+D = Delete     = Borrar        delete
+
+
+Crear datos para la tablas principales:
+
+- TipoDocus, TipoUsua, Usuarios, Empresa
+
+TipoUsua: Administrador, Empleado, Cliente, Proveedor
+
+*/
+/*
+insert into TipoUsuario values
+
+(0, 'Administrador'),
+(0, 'Empleado'),
+(0,'Cliente'),
+(0,'Proveedor');
+
+*/
+select*from TipoUsuario;
+
+#SET FOREIGN_KEY_CHECKS = 0;
+
+#truncate TipoUsuario;
+
+
+# La función sha() se usa para encriptar contraseñas
+
+# Ejemplo: sha('12345') = '8cb2237d0679ca88db6464eac60da96345513964'
+
+
+/*
+insert into usuarios values
+
+(0,'jonathanbetancurespinosa@gmail.com',sha('nopuedeser'),'Activo'),
+
+(0,'holamundo@mail.com',sha('increíble'),'Activo'),
+
+(0,'otrocorreo@mail.com',sha('hola'),'Activo'),
+
+(0,'felipe@mail.com',sha('joder'),'Activo');
+
+*/
+#SET FOREIGN_KEY_CHECKS = 0;     #para corregir errores en los datos, que se repiten por ejemplo
+
+#truncate usuarios;              #segundo paso para corregirlos
+
+select*from usuarios;    
+
+
+
+select*from empresa;
+
+#ya se hizo los datos de la empresa desde la misma tabla, eso es otra manera
+
+
+select*from generos;
+
+select*from perfiles;
+
+
+select * from tipousuario;
+
+select * from usuarios;
+
+select * from perfiles;
+
+
+select curdate();
+
+/*
+insert into perfiles values
+
+(0,1,1,'2021-01-01','Activo'),
+(0,1,2,curdate(),'Activo'),
+(0,1,3,curdate(),'Activo'),
+(0,1,4,curdate(),'Activo'),    #consulta para colocar los usuarios de una tabla en otra con sus id
+
+(0,2,2,curdate(),'Activo'),
+(0,2,3,curdate(),'Activo'),
+
+(0,3,3,curdate(),'Activo'),
+
+(0,4,3,curdate(),'Activo'),
+(0,4,4,curdate(),'Activo');
+*/
+
+#SET FOREIGN_KEY_CHECKS = 1;
+
+#TRUNCATE PERFILES;
+
+
+#consulta para mostrar que persona es que:
+
+
+SELECT d.cedula as Identificación, concat(d.Nombre,' ',d.Apellidos) as 'Nombre Completo',
+
+g.genero as genero,
+
+u.NickName as 'Usuario de Ingreso', 
+t.NombTipo as Perfil, p.FechaIng as 'Fecha de Ingreso'
+
+FROM USUARIOS u
+
+inner join datospersonales d
+
+on d.idUsuarios = u.idUsuarios
+
+inner join generos as g
+
+on d.idGeneros = g.idGeneros 
+
+inner join perfiles p
+
+on p.idUsuarios = u.idUsuarios 
+
+inner join tipousuario t
+
+on p.idTipoUsuario = t.idTipoUsuario
+
+order by u.idusuarios, t.nombtipo;
+
+
+#colocar datos personales
+
+select * from usuarios;
+
+select*from datospersonales;
+
+select*from tipodocus;
+
+select*from generos;
