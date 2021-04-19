@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <title>Don perrinchis</title>
+  </head>
+  <body>
+     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand text-warning" href="index.html"><img width="70px" title="Don perrinchis Logo" src="assets\img\LogoPerrinchis.png">&nbsp;Don perrinchis </a>
+          
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active text-warning" aria-current="page" href="Catalogo.html">Catálogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-warning" href="#">Mision</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-warning" href="#" tabindex="-1" aria-disabled="true">Visión</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-warning" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Servicios
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="vacunación.html">Vacunación</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="esterilizacion.html">Esterilización</a></li>
+                  <li><a class="dropdown-item" href="desparasitacion.html">Desparasitación</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="spa.html">Spa mascotas</a></li>
+                  
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-warning" href="#" tabindex="-1" aria-disabled="true"></a>
+              </li>
+            </ul>
+            <ul>
+          
+              <button class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target=".ingreso" type="button">Ingreso</button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="modal fade ingreso" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Ingreso al sistema</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="col text-center">
+                <img src="assets\img\LogoPerrinchis.png" width="50%"   alt="Logo don Perrinchis">
+              </div>
+              <form>
+                <div class="mb-3">
+                  <label for="recipient-name" class="col-form-label">NickName:</label>
+                  <input type="text" class="form-control" id="recipient-name">
+                </div>
+                <div class="mb-3">
+                  <label for="message-text" class="col-form-label">Contraseña:</label>
+                  <input type="password" class="form-control" id="recipient-name">
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Iniciar Sesión</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col text-center">
+        <h2>Tipo de mascota</h2>
+      </div>
+        
+        <section class="container">
+          <div class="row">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                  <div class="card h-100">
+                    <a href="vacunaciongatos.html">
+                    <img src="assets\img\gatos.jpg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h3 class="card-title text-center">Gatos</h3>
+                    </div>
+                      
+                  </div>
+                </div>
+                
+                <div class="col">
+                  <div class="card h-100">
+                    <a href= "vacunacionperros.html">
+                    <img src="assets\img\perros.jpg" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                      <h3 class="card-title text-center">Perros</h3>
+                    </div>
+
+                  </div>
+                </div>
+
+
+              
+              
+          </section>
+
+      
+
+
+
+
+    </body>
+</html>
