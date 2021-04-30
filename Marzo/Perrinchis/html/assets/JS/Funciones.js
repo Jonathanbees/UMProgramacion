@@ -1,4 +1,4 @@
-'use strict';
+/*'use strict';
 
 function login(user, pass) {
     //declarar constantes y variables
@@ -30,6 +30,7 @@ function login(user, pass) {
 
     
 }
+*/
 //Ejercicio trabajador
 //Teniendo como dato de entrada el sueldo base y los años de servicio de un trabajador, realice un algoritmo que determine el monto del bono vacacional, bono fin de año y fideicomiso. Las vacaciones corresponden a 7 días desueldo mas un día por cada año de servicio, el bono fin de año corresponde a 45 días de sueldo, y el fideicomiso corresponde al 12% del sueldo
 
@@ -71,34 +72,100 @@ function prestaciones(sueldo, years){
       document.write('no hay saldo en la cuenta, intente más tarde.')
     }
   }
+  */
+ //Cajero automático
+// Constantes y Variables:
+  const saldo = 900000;
+  const retiros = [10000,20000,50000,200000,600000];
+  const error = 'Clave Incorrecta';
+  
+  var salidas;
+  var clave = 2345;
+  var numerocuenta;
 
-function retirar(valores) {
-  const val1 = 10000
-  const val2 = 20000
-  const val3 = 50000
-  const val4 = 200000
-  const val5 = 600000
-  var retiro = parseInt(prompt('¿Cuanto desea retirar?'))
+// Definir Funciones:
+// Función Saldo:
+function Saldo(resclave){
+  // Condicionar si la clave ingresada es la correcta:
+  if (resclave === clave){
+    return ("Su saldo es de "+saldo);
+  }else{
+    return error;
   }
 }
-*/
+//
+// test de función saldo: Saldo(2345)
 
-//funcion clave
-var p1 = document.getElementById("clave").value;
-var p2 = document.getElementById("validarclave").value;
-contador = 0
-function claves(clave, newclave){
-  newclave;
-  while (p1===p2 && p1&p2 != 0 &&contador <p1&p2){
-   if (p1!=p2) {
-    alert("Las passwords deben de coincidir") return false;
-     
-   } else {alert("contraseña correcta") return true;
-    contador++;
-    newclave = document.getElementById("nuevaclave").value;
-    clave = newclave
+// Función Retirar:
+function Retiros(valor,resclave){
+  // Validar que la clave sea correcta
+  var resultado;
+  resclave === clave ? resultado=newsaldo(valor) : resultado=error;
+  return resultado  
 }
+//Retiros(3000,2345)
+
+function newsaldo(valor){
+  let saldonew = saldo - valor;
+  let mensaje = 'Se han usado '+valor+' Su saldo actual es de '+saldonew;
+  let errorsaldo = 'Fondos insufucientes';
+  saldonew < saldo & saldonew > 0 ? resultado = mensaje : resultado = errorsaldo;
+  return resultado;
+}
+// funcion Transferir:
+function Transferencia(cuenta, resclave, valortransferir){
+  let resultado;
+  resclave === clave ? resultado=valortransfiere(valortransferir) : resultado='errores';
+  return resultado
+}
+
+function valortransfiere(monto){
+  var valor = saldo-monto 
+  let resultado;
+  valor > 0 ? resultado=newsaldo(monto) : resultado=error
+  return resultado;
+}
+// Transferencia(123245,2345,800000);
+
+function CambioClave(resclave, newclave){
+  resclave === clave ? resultado ="Su nueva clave es "+ (clave = newclave) : resultado = error
+  return resultado;
+}
+
+function inicio(operacion){
+  
+  if(operacion < 1 || operacion > 4){
+  
+  } 
     
-
-
-claves(1234,2345)
+  switch (operacion){
+      case 1:
+        var x = parseInt(prompt('digite la clave'))
+        salidas = Saldo(x);
+        break;
+      case 2:
+        var val = parseInt(prompt('Digite el valor a transferir'))
+        var con = parseInt(prompt('digite la clave'))
+        salidas = Retiros(val,con)
+        break;
+      case 3:
+        var persona= parseInt(prompt('Indique la cuenta a transferir'))
+        var sal = parseInt(prompt('Digite la clave'))
+        var con = parseInt(prompt('Digite el valor a transferir'))
+        salidas = Transferencia(persona, sal, con)
+        break;
+      case 4:
+        var y = parseInt(prompt('digite la clave actual'))
+        var z = parseInt(prompt('digite la clave nueva'))
+        salidas = CambioClave(y, z)
+        
+        break;
+      default:
+        salidas = "Opción no válida";
+      break;
+      
+  }
+  console.log(salidas);
+  document.getElementById("resultado").innerHTML = salidas
+  return salidas;
+}
