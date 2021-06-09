@@ -84,5 +84,183 @@
     <li><a href="https://estilonext.com/estilo-de-vida/tipos-de-juegos" target="_blank" >Tipos de juegos</a></li>
     <li><a href="https://es.wikipedia.org/wiki/Juego_de_mesa" target="_blank">Que es un juego de mesa</a></li>
 </ul>
+<br><br>
+
+<h4>Ejemplo de tabla</h4>
+
+<form action="datos.php" method="post">
+
+<label for="Nombre">Nombre</label>
+<input type="text" id="Nombre" placeholder="Escriba su nombre">         
+<br><br>
+
+<input type="number" id="edad" placeholder="Escriba la edad">
+<br><br>
+
+<input type="file" id="Foto" placeholder="Seleccione la foto">
+<br><br>
+
+<input type="date" name="Fecha" id="Fecha">
+<br><br>
+
+<input type="password" name="Contraseña" id="Contraseña" placeholder="Ingrese la contraseña">
+<br><br>
+
+<input type="email" name="email" id="email" placeholder="Ingrese el correo" required>
+<br><br>
+
+<label for="sexo">Sexo</label>
+<select name="sexo" id="sexo">
+<option value="macho"> Macho</option>
+<option value="Hembra">Hembra</option>
+</select>
+<br><br>
+
+<label for="razas">Seleccione la raza</label>
+<input list="razas">
+<datalist id="razas">
+    <option >Coker</option>
+    <option >Criollo</option>
+    <option >Bulldog</option>
+    <option >Teckel</option>
+</datalist>
+<br><br>
+
+<label for="sexo">Seleccione el sexo de la mascota</label>
+<input type="checkbox" name="sexo" id="sexo"> Macho
+<input type="checkbox" name="sexo" id="sexo"> hembra
+<br><br>
+
+<label for="sexo">Seleccione el sexo de la mascota</label>
+<input type="radio" name="sexo" id="sexo"> Macho
+<input type="radio" name="sexo" id="sexo"> hembra
+<br><br>
+
+<input type="submit" value="Enviar">
+<input type="reset" value= "Cancelar">
+
+</form>
+
+<h3>formulario de contacto</h3>
+    <form action="formulario1.php" method="post">
+        <input type="text" placeholder="Nombre">
+        <br><br>
+        <input type="number" placeholder="Numero de contacto">
+        <br><br>
+        <input type="email" placeholder="Correo electrónico" required>
+        <br><br>
+        <label for="mensaje">Mensaje</label>
+        <textarea for= "mensaje" cols="13" rows="2"></textarea>
+        <br><br>
+        <input type="submit" value="Enviar">
+        <input type="reset" value= "Cancelar">
+        <br><br>
+        <br><br>
+    </form>
+
+<h3>Formulario de registro</h3>
+
+<form action="formulario2.php" method="post">
+
+    <input type="text" placeholder="Nombre">
+    <br><br>
+    <input type="text" placeholder="Apellidos">
+    <br><br>
+    <input type="number" name="numero" placeholder="Numero de contacto">
+    <br><br>
+
+    <label for="fechanaci">Fecha de nacimiento: </label>
+    <input type="date" name="fechanaci" required>
+    <br><br>
+    <input type="email" placeholder="Correo electrónico" required>
+    <br><br>
+    <label for="contraseña">Contraseña     </label>
+    <input type="password" name="contraseña">
+    <br><br>
+    <label for="contraseña">Repita la contraseña</label>
+    <input type="password" name="contraseña">
+    <br><br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value= "Cancelar">
+    <br><br>
+    <br><br>
+</form>
+
+<h3>Formulario de inicio de sesión</h3>
+<form action="formulario3.php" method="post">
+    <label for="usuario">Usuario o correo electrónico</label>
+<input type="text" type="email" name="usuario" required>
+<br><br>
+<label for="Contra">Contraseña</label>
+<input type="password" name="Contra" required>
+<br><br>
+<input type="submit" value="Enviar">
+    <input type="reset" value= "Cancelar">
+    <br><br>
+    <br><br>
+</form>
+
+<h3>Encuesta de satisfacción</h3>
+
+<form action="formulario4.php" method="post">
+
+    <label for="usuario">Nombre</label>
+    <input type="text" name="usuario">
+    <br><br>
+
+    <label for="cliente">Que tan satisfecho estás con el servicio al cliente?</label>
+    <br>
+    <input type="radio" name="malo">Muy insatisfecho
+    <input type="radio" name="malo">Insatisfecho
+    <input type="radio" name="malo">Regular
+    <input type="radio" name="malo">Satisfecho
+    <input type="radio" name="malo">Muy satisfecho
+    <br><br>
+
+    <label for="cliente">Como te parece la calidad del producto?</label>
+    <br>
+    <input type="radio" name="malo">Malo
+    <input type="radio" name="malo">Un poco malo
+    <input type="radio" name="malo">Regular
+    <input type="radio" name="malo">Bueno
+    <input type="radio" name="malo">Excelente
+    <br><br>
+
+    <label for="informacion">¿La información le pareció oportuna?</label>
+    <select name="sexo" id="informacion">
+    <option value="si"> si</option>
+    <option value="no">no</option>
+    </select>
+
+    <input type="text" name="opinion" placeholder="¿Por qué?">
+    <br><br>
+
+    <label for="facilidad">¿La facilidad de interacción es la esperada?</label>
+    <select name="sexo" id="informacion">
+    <option value="si"> si</option>
+    <option value="no">no</option>
+    <option value="corregir">Se puede corregir</option>
+    </select>
+
+    <input type="text" name="opinion" placeholder="¿Que se puede mejorar?">
+    <br><br>
+
+    <label for="cliente">¿Recomendarías la empresa?</label>
+    <br>
+    <input type="radio" name="malo">1. Obviamente no
+    <input type="radio" name="malo">2. No
+    <input type="radio" name="malo">3. Puede ser
+    <input type="radio" name="malo">4. Si
+    <input type="radio" name="malo">5. Absolutamente si
+    <br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value= "Cancelar">
+    <br><br>
+    <br><br>
+    <br><br>
+</form>
+
+
 </body>
 </html>
